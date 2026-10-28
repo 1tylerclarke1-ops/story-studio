@@ -1,0 +1,34 @@
+{
+  "name": "CameraAngle",
+  "type": "object",
+  "properties": {
+    "location_id": {
+      "type": "string",
+      "description": "ID of the Location this angle belongs to"
+    },
+    "letter": {
+      "type": "string",
+      "description": "Coverage letter, e.g. A"
+    },
+    "name": {
+      "type": "string",
+      "description": "Angle name, e.g. Wide master"
+    },
+    "description_prompt": {
+      "type": "string",
+      "description": "Long-form visual description used to generate the angle"
+    },
+    "reference_image": {
+      "type": "string",
+      "description": "Reference image file URI"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Production notes about this angle"
+    }
+  },
+  "required": [
+    "letter",
+    "name"
+  ]
+}

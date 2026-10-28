@@ -13,6 +13,7 @@ import ForgotPassword from '@/pages/ForgotPassword';
 import ResetPassword from '@/pages/ResetPassword';
 import Characters from '@/pages/Characters';
 import Locations from '@/pages/Locations';
+import LocationDetail from '@/pages/LocationDetail';
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -48,6 +49,7 @@ const AuthenticatedApp = () => {
       <Route element={<ProtectedRoute unauthenticatedElement={<Navigate to="/login" replace />} />}>
         <Route path="/" element={<Characters />} />
         <Route path="/locations" element={<Locations />} />
+        <Route path="/locations/:id" element={<LocationDetail />} />
       </Route>
       {/* Add your page Route elements here */}
       <Route path="*" element={<PageNotFound />} />

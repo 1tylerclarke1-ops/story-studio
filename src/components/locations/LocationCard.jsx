@@ -1,13 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { MapPin, Pencil } from "lucide-react";
 import FileImage from "@/components/characters/FileImage";
 
 export default function LocationCard({ location, onEdit }) {
+  const navigate = useNavigate();
   const { name, first_episode, description_prompt, master_image, notes } = location;
 
   return (
     <article
-      onClick={() => onEdit(location)}
+      onClick={() => navigate(`/locations/${location.id}`)}
       className="group cursor-pointer overflow-hidden rounded-[18px] border border-white/[0.07] bg-[#0E0E10] transition-all duration-500 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.9)]"
     >
       <div className="relative aspect-video overflow-hidden bg-[#15151A]">
