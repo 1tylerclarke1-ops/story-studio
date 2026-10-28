@@ -108,7 +108,7 @@ export default function LocationForm({ open, onOpenChange, location, onSaved }) 
               <Input
                 value={values.name}
                 onChange={(event) => set("name", event.target.value)}
-                placeholder="The Drowned Arcade"
+                placeholder="The Laundromat"
                 className={fieldClass}
                 autoFocus
               />
@@ -138,7 +138,7 @@ export default function LocationForm({ open, onOpenChange, location, onSaved }) 
               <Textarea
                 value={values.description_prompt}
                 onChange={(event) => set("description_prompt", event.target.value)}
-                placeholder="Neon-lit arcade half-flooded with black water, cabinets still humming, hand-painted signage peeling…"
+                placeholder="Small 24-hour laundromat at 2am, two rows of washers, a wall of dryers, rain on the front window…"
                 rows={4}
                 className={`${fieldClass} resize-none leading-relaxed`}
               />
@@ -156,7 +156,7 @@ export default function LocationForm({ open, onOpenChange, location, onSaved }) 
               <Textarea
                 value={values.notes}
                 onChange={(event) => set("notes", event.target.value)}
-                placeholder="Practical set built on stage 4 — reuse the water rig from S1E3."
+                  placeholder="Layout rules, fixed props, what must never change between episodes."
                 rows={3}
                 className={`${fieldClass} resize-none leading-relaxed`}
               />
