@@ -72,7 +72,7 @@ export default function Locations() {
             {[0, 1, 2, 3].map((key) => (
               <div
                 key={key}
-                className="aspect-[3/4.2] animate-pulse rounded-[18px] border border-white/[0.06] bg-white/[0.02]"
+                className="aspect-video animate-pulse rounded-[18px] border border-white/[0.06] bg-white/[0.02]"
               />
             ))}
           </div>
