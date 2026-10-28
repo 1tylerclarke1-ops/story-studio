@@ -10,7 +10,7 @@ export default function LocationCard({ location, onEdit }) {
       onClick={() => onEdit(location)}
       className="group cursor-pointer overflow-hidden rounded-[18px] border border-white/[0.07] bg-[#0E0E10] transition-all duration-500 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.9)]"
     >
-      <div className="relative aspect-[4/5] overflow-hidden bg-[#15151A]">
+      <div className="relative aspect-video overflow-hidden bg-[#15151A]">
         {master_image ? (
           <FileImage
             fileUri={master_image}
