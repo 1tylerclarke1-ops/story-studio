@@ -1,0 +1,53 @@
+{
+  "name": "Character",
+  "type": "object",
+  "properties": {
+    "show": {
+      "type": "string",
+      "default": "Night Cycles",
+      "description": "The show this character belongs to"
+    },
+    "name": {
+      "type": "string",
+      "description": "Character name"
+    },
+    "role": {
+      "type": "string",
+      "description": "Role in the story, e.g. lead, antagonist, recurring"
+    },
+    "first_episode": {
+      "type": "string",
+      "description": "Episode the character first appears in, e.g. S1E1"
+    },
+    "appearance_prompt": {
+      "type": "string",
+      "description": "Long-form visual description used to generate the character"
+    },
+    "reference_images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Reference image file URIs"
+    },
+    "voice_preset": {
+      "type": "string"
+    },
+    "voice_pace": {
+      "type": "string"
+    },
+    "voice_pitch": {
+      "type": "string"
+    },
+    "voice_energy": {
+      "type": "string"
+    },
+    "voice_sample": {
+      "type": "string",
+      "description": "Voice sample file URI"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
