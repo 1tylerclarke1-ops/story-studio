@@ -22,8 +22,8 @@ export default function MasterImageUploader({ value, onChange }) {
   return (
     <div className="space-y-2">
       {value ? (
-        <div className="group relative w-32 overflow-hidden rounded-lg border border-white/10 bg-white/[0.03]">
-          <div className="aspect-[4/5]">
+        <div className="group relative w-64 overflow-hidden rounded-lg border border-white/10 bg-white/[0.03]">
+          <div className="aspect-video">
             <FileImage fileUri={value} alt="Master image" className="h-full w-full object-cover" />
           </div>
           <div className="flex items-center justify-between border-t border-white/10 px-2 py-1.5">
@@ -54,7 +54,7 @@ export default function MasterImageUploader({ value, onChange }) {
           type="button"
           onClick={() => inputRef.current?.click()}
           disabled={busy}
-          className="flex h-[160px] w-32 flex-col items-center justify-center gap-2 rounded-lg border border-dashed border-white/15 bg-white/[0.02] text-white/40 transition hover:border-[#E3A75F]/60 hover:text-[#E3A75F] disabled:opacity-60"
+          className="flex aspect-video w-64 flex-col items-center justify-center gap-2 rounded-lg border border-dashed border-white/15 bg-white/[0.02] text-white/40 transition hover:border-[#E3A75F]/60 hover:text-[#E3A75F] disabled:opacity-60"
         >
           {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <ImagePlus className="h-4 w-4" />}
           <span className="text-[10px] uppercase tracking-[0.12em]">{busy ? "Uploading" : "Upload"}</span>
