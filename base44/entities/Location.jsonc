@@ -1,0 +1,34 @@
+{
+  "name": "Location",
+  "type": "object",
+  "properties": {
+    "show": {
+      "type": "string",
+      "default": "Night Cycles",
+      "description": "The show this location belongs to"
+    },
+    "name": {
+      "type": "string",
+      "description": "Location name"
+    },
+    "first_episode": {
+      "type": "string",
+      "description": "Episode the location first appears in, e.g. S1E1"
+    },
+    "description_prompt": {
+      "type": "string",
+      "description": "Long-form visual description used to generate the location"
+    },
+    "master_image": {
+      "type": "string",
+      "description": "Master reference image file URI"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Production notes about this location"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

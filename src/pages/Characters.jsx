@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { base44 } from "@/api/base44Client";
 import { Film, Plus } from "lucide-react";
+import SiteNav from "@/components/SiteNav";
 import CharacterCard from "@/components/characters/CharacterCard";
 import CharacterForm from "@/components/characters/CharacterForm";
 
@@ -35,26 +36,19 @@ export default function Characters() {
       <div className="pointer-events-none fixed inset-0 bg-[radial-gradient(900px_520px_at_12%_-12%,rgba(227,167,95,0.13),transparent_68%)]" />
 
       <div className="relative mx-auto max-w-[1380px] px-5 pb-20 pt-6 sm:px-8 sm:pt-8">
-        <header className="flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/12 bg-white/[0.04]">
-              <Film className="h-4 w-4 text-[#E3A75F]" />
-            </span>
-            <div className="leading-tight">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-white/70">Story Studio</p>
-              <p className="text-[11px] text-white/30">{showName}</p>
-            </div>
-          </div>
-
-          <button
-            type="button"
-            onClick={openNew}
-            className="group inline-flex items-center gap-2 rounded-full bg-[#E3A75F] px-4 py-2.5 text-[13px] font-medium text-[#14100A] transition hover:bg-[#F0B979]"
-          >
-            <Plus className="h-4 w-4 transition-transform duration-300 group-hover:rotate-90" />
-            New character
-          </button>
-        </header>
+        <SiteNav
+          subtitle={showName}
+          action={
+            <button
+              type="button"
+              onClick={openNew}
+              className="group inline-flex items-center gap-2 rounded-full bg-[#E3A75F] px-4 py-2.5 text-[13px] font-medium text-[#14100A] transition hover:bg-[#F0B979]"
+            >
+              <Plus className="h-4 w-4 transition-transform duration-300 group-hover:rotate-90" />
+              New character
+            </button>
+          }
+        />
 
         <div className="mt-14 flex flex-wrap items-end justify-between gap-4 border-b border-white/[0.07] pb-8">
           <div>
